@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
+
 @Component
 public class CpfDuplicado implements Validator {
 	
@@ -30,7 +31,7 @@ public class CpfDuplicado implements Validator {
 
 		Paciente paciente = pacienteRepository.findByCpf(form.getCpf());
 		if (paciente != null) {
-			errors.rejectValue("email: " + form.getCpf(), null, "Esse cpf já está cadastrado...");
+			errors.rejectValue("cpf: " + form.getCpf(), null, "Esse cpf já está cadastrado...");
 		}
 		
 	}

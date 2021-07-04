@@ -24,7 +24,7 @@ public class EmailDuplicado implements Validator {
 	@Override
 	public void validate(Object target, Errors errors) {
 
-		if (errors.hasErrors()) { // a hasErros trata o erro NullPointerException.
+		if (errors.hasErrors()) { // se tiver erro retorna.
 			return;
 		}
 
