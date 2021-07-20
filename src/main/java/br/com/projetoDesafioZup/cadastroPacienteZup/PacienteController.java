@@ -45,7 +45,7 @@ public class PacienteController {
 		return pacienteDto.toString();
 	}
 	
-	@GetMapping(value = "/consultaPaciente/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/consultaPaciente/{id}")
 	public String salvar(@PathVariable("id") Long id) {
 		
 		Paciente pacienteEncontrado = pacienteRepository.getOne(id);
