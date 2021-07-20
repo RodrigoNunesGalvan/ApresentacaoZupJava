@@ -6,7 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import br.com.projetoDesafioZup.dto.PacienteDto;
-import br.com.projetoDesafioZup.entity.Paciente;
+import br.com.projetoDesafioZup.entity.PacienteEntity;
 import br.com.projetoDesafioZup.repository.PacienteRepository;
 
 @Component
@@ -33,7 +33,7 @@ public class CpfDuplicado implements Validator {
 		PacienteDto form = (PacienteDto) target;
 
 
-		Paciente paciente = pacienteRepository.findByCpf(form.getCpf());
+		PacienteEntity paciente = pacienteRepository.findByCpf(form.getCpf());
 		if (paciente != null) {
 			errors.rejectValue("cpf: " + form.getCpf(), null, "Esse cpf já está cadastrado...");
 		}

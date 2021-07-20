@@ -6,7 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import br.com.projetoDesafioZup.dto.PacienteDto;
-import br.com.projetoDesafioZup.entity.Paciente;
+import br.com.projetoDesafioZup.entity.PacienteEntity;
 import br.com.projetoDesafioZup.repository.PacienteRepository;
 
 @Component
@@ -34,7 +34,7 @@ public class EmailDuplicado implements Validator {
 
 		PacienteDto form = (PacienteDto) target;
 
-		Paciente paciente = pacienteRepository.findByEmail(form.getEmail());
+		PacienteEntity paciente = pacienteRepository.findByEmail(form.getEmail());
 		if (paciente != null) {
 			errors.rejectValue("email: " + form.getEmail(), null, "Esse email já está cadastrado...");
 		}

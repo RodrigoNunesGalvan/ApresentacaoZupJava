@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projetoDesafioZup.dto.VacinaDto;
-import br.com.projetoDesafioZup.entity.Vacina;
+import br.com.projetoDesafioZup.entity.VacinaEntity;
 import br.com.projetoDesafioZup.repository.VacinaRepository;
 import br.com.projetoDesafioZup.service.VacinaService;
 
@@ -37,7 +37,7 @@ public class VacinaController {
 	}
 
 	@GetMapping(value = "/consultaVacina", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Vacina> consultar() {
+	public List<VacinaEntity> consultar() {
 		return vacinaRepository.findAll();
 	}
 

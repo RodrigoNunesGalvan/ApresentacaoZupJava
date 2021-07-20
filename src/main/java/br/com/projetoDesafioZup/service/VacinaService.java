@@ -2,7 +2,7 @@ package br.com.projetoDesafioZup.service;
 
 import org.springframework.stereotype.Service;
 
-import br.com.projetoDesafioZup.entity.Vacina;
+import br.com.projetoDesafioZup.entity.VacinaEntity;
 import br.com.projetoDesafioZup.repository.VacinaRepository;
 
 @Service
@@ -15,11 +15,11 @@ public class VacinaService {
 		this.vacinaRepository = vacinaRepository;
 	}
 	
-	public void salvar(Vacina vacina) {
+	public void salvar(VacinaEntity vacina) {
 		vacinaRepository.save(vacina);
 	}
 	
-	public void consultar(Vacina vacina) {
+	public void consultar(VacinaEntity vacina) {
 		vacinaRepository.save(vacina);
 	}
 

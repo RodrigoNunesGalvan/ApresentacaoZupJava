@@ -13,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
-import br.com.projetoDesafioZup.entity.Paciente;
+import br.com.projetoDesafioZup.entity.PacienteEntity;
 
 public class PacienteDto {
 
@@ -31,8 +31,8 @@ public class PacienteDto {
 	@JsonFormat(shape = Shape.STRING, pattern = "dd/MM/yyyy")
 	private LocalDate nascimento;
 
-	public Paciente toEntity() {
-		Paciente paciente = new Paciente();
+	public PacienteEntity toEntity() {
+		PacienteEntity paciente = new PacienteEntity();
 		paciente.setNome(this.getNome());
 		paciente.setEmail(this.getEmail());
 		paciente.setCpf(this.getCpf());

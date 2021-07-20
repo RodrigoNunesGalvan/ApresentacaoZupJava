@@ -8,15 +8,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Vacina {
+public class PacienteEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nomeVacina;
-	private String emailPaciente;
-	private LocalDate dataVacina;
-		
+	private String nome;
+	private String email;
+	private String cpf;
+	private LocalDate nascimento;
+	
 	
 	public Long getId() {
 		return id;
@@ -24,23 +25,29 @@ public class Vacina {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNomeVacina() {
-		return nomeVacina;
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeVacina(String nomeVacina) {
-		this.nomeVacina = nomeVacina;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public String getEmailPaciente() {
-		return emailPaciente;
+	public String getEmail() {
+		return email;
 	}
-	public void setEmailPaciente(String emailPaciente) {
-		this.emailPaciente = emailPaciente;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public LocalDate getDataVacina() {
-		return dataVacina;
+	public String getCpf() {
+		return cpf;
 	}
-	public void setDataVacina(LocalDate dataVacina) {
-		this.dataVacina = dataVacina;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public LocalDate getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(LocalDate nascimento) {
+		this.nascimento = nascimento;
 	}
 	@Override
 	public int hashCode() {
@@ -57,7 +64,7 @@ public class Vacina {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Vacina other = (Vacina) obj;
+		PacienteEntity other = (PacienteEntity) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -66,6 +73,4 @@ public class Vacina {
 		return true;
 	}
 		
-	
-
 }

@@ -12,7 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
-import br.com.projetoDesafioZup.entity.Vacina;
+import br.com.projetoDesafioZup.entity.VacinaEntity;
 
 public class VacinaDto {
 	
@@ -27,8 +27,8 @@ public class VacinaDto {
 	@JsonFormat(shape = Shape.STRING,pattern = "dd/MM/yyyy")
 	private LocalDate dataVacina;
 	
-	public Vacina toEntity() {
-		Vacina vacina = new Vacina();
+	public VacinaEntity toEntity() {
+		VacinaEntity vacina = new VacinaEntity();
 		vacina.setNomeVacina(this.getNomeVacina());
 		vacina.setEmailPaciente(this.getEmailPaciente());
 		vacina.setDataVacina(this.getDataVacina());

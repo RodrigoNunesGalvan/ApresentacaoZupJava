@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projetoDesafioZup.dto.PacienteDto;
-import br.com.projetoDesafioZup.entity.Paciente;
+import br.com.projetoDesafioZup.entity.PacienteEntity;
 import br.com.projetoDesafioZup.errorHandler.CpfDuplicado;
 import br.com.projetoDesafioZup.errorHandler.EmailDuplicado;
 import br.com.projetoDesafioZup.repository.PacienteRepository;
@@ -55,12 +55,12 @@ public class PacienteController {
 	@GetMapping(value = "/consultaPaciente/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String salvar(@PathVariable("id") Long id) {
 		
-		Paciente pacienteEncontrado = pacienteRepository.getOne(id);
+		PacienteEntity pacienteEncontrado = pacienteRepository.getOne(id);
 		return pacienteEncontrado.toString();
 	}
 
 	@GetMapping(value = "/consultaPaciente", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Paciente> consultar() {
+	public List<PacienteEntity> consultar() {
 		return pacienteRepository.findAll();
 	}
 
