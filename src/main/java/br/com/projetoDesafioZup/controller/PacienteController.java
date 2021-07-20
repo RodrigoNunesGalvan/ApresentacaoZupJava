@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.projetoDesafioZup.dto.PacienteDto;
 import br.com.projetoDesafioZup.entity.Paciente;
+import br.com.projetoDesafioZup.errorHandler.CpfDuplicado;
+import br.com.projetoDesafioZup.errorHandler.EmailDuplicado;
 import br.com.projetoDesafioZup.repository.PacienteRepository;
 import br.com.projetoDesafioZup.service.PacienteService;
-import br.com.projetoDesafioZup.validation.CpfDuplicado;
-import br.com.projetoDesafioZup.validation.EmailDuplicado;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
