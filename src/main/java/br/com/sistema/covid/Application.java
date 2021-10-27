@@ -1,4 +1,4 @@
-package br.com.projetoDesafioZup;
+package br.com.sistema.covid;
 
 
 import org.springframework.boot.SpringApplication;

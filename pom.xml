@@ -9,13 +9,13 @@
 		<version>2.4.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.projetodesafiozup</groupId>
-	<artifactId>controlededacinacaozupdesafio</artifactId>
+	<groupId>br.com.sistema.covid</groupId>
+	<artifactId>sistema-covid</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>controledevacinacaozupdesafio</name>
-	<description>Projeto Desafio Zup</description>
+	<name>sistema-covid</name>
+	<description>Projeto Sistema da Cadastro de Paciente e Vacina</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

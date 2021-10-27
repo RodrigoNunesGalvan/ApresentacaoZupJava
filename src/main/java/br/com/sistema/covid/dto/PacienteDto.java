@@ -1,4 +1,4 @@
-package br.com.projetoDesafioZup.cadastroPacienteZup;
+package br.com.sistema.covid.dto;
 
 import java.time.LocalDate;
 
@@ -12,6 +12,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
+import br.com.sistema.covid.model.Paciente;
 
 public class PacienteDto {
 

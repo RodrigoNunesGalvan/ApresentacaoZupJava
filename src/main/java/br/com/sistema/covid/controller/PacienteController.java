@@ -1,4 +1,4 @@
-package br.com.projetoDesafioZup.cadastroPacienteZup;
+package br.com.sistema.covid.controller;
 
 import java.util.List;
 
@@ -14,6 +14,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import br.com.sistema.covid.dto.PacienteDto;
+import br.com.sistema.covid.excepition.handler.CpfDuplicado;
+import br.com.sistema.covid.excepition.handler.EmailDuplicado;
+import br.com.sistema.covid.model.Paciente;
+import br.com.sistema.covid.repository.PacienteRepository;
+import br.com.sistema.covid.service.PacienteService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController

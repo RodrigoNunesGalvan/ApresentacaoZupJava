@@ -1,6 +1,9 @@
-package br.com.projetoDesafioZup.cadastroAplicacaoVacinaZup;
+package br.com.sistema.covid.service;
 
 import org.springframework.stereotype.Service;
+
+import br.com.sistema.covid.model.Vacina;
+import br.com.sistema.covid.repository.VacinaRepository;
 
 @Service
 public class VacinaService {

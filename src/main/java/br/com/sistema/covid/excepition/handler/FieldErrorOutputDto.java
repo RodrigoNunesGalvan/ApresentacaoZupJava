@@ -1,4 +1,4 @@
-package br.com.projetoDesafioZup.compartilhavel;
+package br.com.sistema.covid.excepition.handler;
 
 public class FieldErrorOutputDto {
 	
